@@ -4,7 +4,7 @@ data/patch-*/
 results/
 wandb/
 
-# Trained checkpoints — except small released ones for the deployed app
+# Trained checkpoints — except small released ones shipped with the demo app
 models/*
 !models/release/
 

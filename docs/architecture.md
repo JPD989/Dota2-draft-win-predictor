@@ -526,7 +526,7 @@ def init_tracker(project: str, config: dict, enabled: bool) -> Tracker
 | script                      | contract                                                            |
 |-----------------------------|---------------------------------------------------------------------|
 | fetch_hero_constants.py     | `--out data/artifacts` → heroes.json                                |
-| build_artifacts.py          | `--data data/raw --out data/artifacts [--val-frac .1 --test-frac .1]`. Loads matches, takes `chronological_split(...).train` ONLY, writes: `hero_vocab.json`, `synergy.npz`, `counter.npz` (PairStats.save), `hero_win_rates.parquet`, `meta.json` (train rows, radiant_wr_train, split name, date). These are small and committable — the deployed app runs off them without data/raw. |
+| build_artifacts.py          | `--data data/raw --out data/artifacts [--val-frac .1 --test-frac .1]`. Loads matches, takes `chronological_split(...).train` ONLY, writes: `hero_vocab.json`, `synergy.npz`, `counter.npz` (PairStats.save), `hero_win_rates.parquet`, `meta.json` (train rows, radiant_wr_train, split name, date). These are small and committable — the app runs off them without data/raw. |
 | train_baselines.py          | `--data --sample N --use-rank --mirror --tag T --out models/ --results results/baselines` — fits logreg + xgboost, saves via checkpoint_path(name, tag) |
 | train_transformer.py        | hparams + `--epochs --sample --pick-dropout --mirror --use-rank --tag T --wandb/--no-wandb --out models/` |
 | train_gnn.py                | same shape as train_transformer.py                                  |
