@@ -1,0 +1,17 @@
+# Runtime dependencies of the Streamlit app alone (also the file a Streamlit host reads). Kept deliberately slim: no torch (multi-GB CUDA wheels from PyPI), no Jupyter/W&B.
+#
+# Local development uses pyproject.toml instead:
+#   make install        ->  pip install -e ".[dev]"
+#   make install-all    ->  pip install -e ".[dev,app,tracking,torch]"
+#
+# To serve a transformer/GNN checkpoint from models/release/ on Cloud, add the CPU wheel:
+#   --extra-index-url https://download.pytorch.org/whl/cpu
+#   torch>=2.2
+pandas>=2.0
+pyarrow>=14.0
+numpy>=1.26
+scipy>=1.11
+scikit-learn==1.9.0  # pinned: models/release/logreg.pkl is a pickle of a scikit-learn model
+xgboost==3.3.0  # pinned: models/release/xgboost.pkl is a pickle of an XGBoost model
+requests>=2.31
+streamlit>=1.59  # UI uses st.space, segmented_control(required=), width=, keyed containers

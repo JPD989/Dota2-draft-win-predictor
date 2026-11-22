@@ -1,0 +1,27 @@
+# Data & artifacts too large / regenerable
+data/raw/
+data/patch-*/
+results/
+wandb/
+
+# Trained checkpoints — except small released ones for the deployed app
+models/*
+!models/release/
+
+# Small committable artifacts are kept: data/artifacts/, docs/figures/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.venv-gpu/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
