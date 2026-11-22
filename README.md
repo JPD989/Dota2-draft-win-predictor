@@ -11,7 +11,7 @@ contribution here is the evaluation: confidence intervals on every number, paire
 comparisons between models, a calibration analysis, a patch-drift study, strict leakage
 rules, and a reproducible pipeline from raw API data to the demo app.
 
-A longer, non-specialist write-up of the method and findings is in
+A longer  write-up of the method and findings is in
 [docs/report.md](docs/report.md).
 
 ## Results
